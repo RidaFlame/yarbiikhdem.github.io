@@ -98,7 +98,7 @@ const Contact: React.FC = () => {
                {Object.entries(content.contact.socials).map(([platform, url]) => (
                  <a 
                    key={platform}
-                   href={`https://${url.replace(/^https?:\/\//, '')}`}
+                   href={`https://${(url as string).replace(/^https?:\/\//, '')}`}
                    target="_blank"
                    rel="noopener noreferrer"
                    className="px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-black hover:text-white transition-all capitalize shadow-sm hover:shadow-lg font-medium"
